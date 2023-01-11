@@ -1,17 +1,32 @@
 {
 	id: "0D4D34D13600E79E"
-	group: "6D9FFF86AF79A207"
+	group: ""
 	order_index: 0
 	filename: "0D4D34D13600E79E"
-	title: "Легкое оружие"
+	title: "Оружие"
+	icon: {
+		id: "cgm:assault_rifle"
+		Count: 1b
+		tag: {
+			AmmoCount: 40
+		}
+	}
 	default_quest_shape: ""
 	default_hide_dependency_lines: false
 	quests: [
 		{
 			title: "Пистолет"
+			icon: {
+				id: "cgm:pistol"
+				Count: 1b
+				tag: {
+					AmmoCount: 16
+				}
+			}
 			x: -11.0d
-			y: -1.5d
+			y: -0.5d
 			description: [""]
+			dependencies: ["2C69B47DA2FC7B29"]
 			id: "2A883018671BEE51"
 			tasks: [
 				{
@@ -24,19 +39,32 @@
 					id: "5DC00F950AC76C43"
 					type: "item"
 					item: "minecraft:diamond"
-					consume_items: true
 				}
 			]
 			rewards: [{
 				id: "2EBAC025E24E5726"
 				type: "gamestage"
-				auto: "disabled"
+				title: "Крафт пистолета"
+				icon: {
+					id: "cgm:pistol"
+					Count: 1b
+					tag: {
+						AmmoCount: 16
+					}
+				}
 				ignore_reward_blocking: true
 				stage: "pistol"
 			}]
 		}
 		{
 			title: "Пистолет-пулемет"
+			icon: {
+				id: "cgm:machine_pistol"
+				Count: 1b
+				tag: {
+					AmmoCount: 80
+				}
+			}
 			x: -9.0d
 			y: -1.5d
 			dependencies: ["2A883018671BEE51"]
@@ -46,23 +74,473 @@
 				{
 					id: "3C0598C9AF0B87A2"
 					type: "xp"
-					value: 7L
+					value: 14L
 					points: false
 				}
 				{
 					id: "41112CA920455A4A"
 					type: "item"
 					item: "minecraft:diamond"
-					count: 3L
-					consume_items: true
+					count: 13L
 				}
 			]
 			rewards: [{
 				id: "510C43EB7308659A"
 				type: "gamestage"
-				auto: "disabled"
+				title: "Крафт пистолета-пулемета"
+				icon: {
+					id: "cgm:machine_pistol"
+					Count: 1b
+					tag: {
+						AmmoCount: 80
+					}
+				}
 				ignore_reward_blocking: true
-				stage: "uzi"
+				stage: "machine-pistol"
+			}]
+		}
+		{
+			title: "Дробовик"
+			icon: {
+				id: "cgm:shotgun"
+				Count: 1b
+				tag: {
+					AmmoCount: 8
+				}
+			}
+			x: -9.0d
+			y: 0.5d
+			dependencies: ["2A883018671BEE51"]
+			id: "25F03C8A69944C75"
+			tasks: [
+				{
+					id: "670A5E1528D86B65"
+					type: "xp"
+					value: 15L
+					points: false
+				}
+				{
+					id: "3415CC383B21DFFE"
+					type: "item"
+					item: "minecraft:diamond"
+					count: 15L
+				}
+			]
+			rewards: [{
+				id: "3D0AA62F3F10DAA5"
+				type: "gamestage"
+				title: "Крафт дробовика"
+				icon: {
+					id: "cgm:shotgun"
+					Count: 1b
+					tag: {
+						AmmoCount: 8
+					}
+				}
+				ignore_reward_blocking: true
+				stage: "shotgun"
+			}]
+		}
+		{
+			title: "Патроны"
+			icon: "cgm:basic_bullet"
+			x: -13.0d
+			y: -0.5d
+			id: "2C69B47DA2FC7B29"
+			tasks: [{
+				id: "6C23085745DC448A"
+				type: "xp"
+				value: 1L
+				points: false
+			}]
+			rewards: [{
+				id: "7AE1E2EA593B239E"
+				type: "gamestage"
+				title: "Рецепт патронов"
+				icon: "cgm:basic_bullet"
+				ignore_reward_blocking: true
+				stage: "bullets"
+			}]
+		}
+		{
+			title: "Винтовка"
+			icon: {
+				id: "cgm:rifle"
+				Count: 1b
+				tag: {
+					AmmoCount: 10
+				}
+			}
+			x: -9.0d
+			y: -3.0d
+			dependencies: ["2A883018671BEE51"]
+			id: "1098DCEB0694BAF8"
+			tasks: [
+				{
+					id: "21E58FB560FE2007"
+					type: "xp"
+					value: 35L
+					points: false
+				}
+				{
+					id: "244CAB92D053288D"
+					type: "item"
+					item: "minecraft:diamond"
+					count: 15L
+				}
+			]
+			rewards: [{
+				id: "351B3655A2EC149C"
+				type: "gamestage"
+				title: "Крафт винтовки"
+				icon: {
+					id: "cgm:rifle"
+					Count: 1b
+					tag: {
+						AmmoCount: 10
+					}
+				}
+				ignore_reward_blocking: true
+				stage: "rifle"
+			}]
+		}
+		{
+			title: "Штурмовая винтовка"
+			icon: {
+				id: "cgm:assault_rifle"
+				Count: 1b
+				tag: {
+					AmmoCount: 40
+				}
+			}
+			x: -7.0d
+			y: -1.5d
+			dependencies: ["05DA23EF88C21723"]
+			id: "5FEDFC4690E6E655"
+			tasks: [
+				{
+					id: "0B0142EB63532503"
+					type: "xp"
+					value: 35L
+					points: false
+				}
+				{
+					id: "02D4E307C88FF67B"
+					type: "item"
+					title: "Штурмовая винтовка"
+					item: "minecraft:diamond"
+					count: 15L
+				}
+			]
+			rewards: [{
+				id: "14F7F9064582A44F"
+				type: "gamestage"
+				title: "Крафт штурмовой винтовки"
+				icon: {
+					id: "cgm:assault_rifle"
+					Count: 1b
+					tag: {
+						AmmoCount: 40
+					}
+				}
+				ignore_reward_blocking: true
+				stage: "assault_rifle"
+			}]
+		}
+		{
+			title: "Тяжелая винтовка"
+			icon: {
+				id: "cgm:heavy_rifle"
+				Count: 1b
+				tag: {
+					AmmoCount: 4
+				}
+			}
+			x: -3.0d
+			y: -3.0d
+			dependencies: [
+				"1098DCEB0694BAF8"
+				"7E267D7C3C9E16FA"
+			]
+			id: "79F7EE3B276AED51"
+			tasks: [
+				{
+					id: "1B12CABB51DB88A5"
+					type: "xp"
+					value: 50L
+					points: false
+				}
+				{
+					id: "3134DC8A85F3D78F"
+					type: "item"
+					item: "minecraft:diamond"
+					count: 30L
+				}
+			]
+			rewards: [{
+				id: "09DA1E8B5D5EEAF7"
+				type: "gamestage"
+				title: "Крафт тяжелой винтовки"
+				icon: {
+					id: "cgm:heavy_rifle"
+					Count: 1b
+					tag: {
+						AmmoCount: 4
+					}
+				}
+				ignore_reward_blocking: true
+				stage: "heavy_rifle"
+			}]
+		}
+		{
+			title: "Боевые патроны"
+			icon: "cgm:advanced_bullet"
+			x: -5.0d
+			y: -1.5d
+			dependencies: ["5FEDFC4690E6E655"]
+			id: "7E267D7C3C9E16FA"
+			tasks: [
+				{
+					id: "714119FAB4C072DD"
+					type: "xp"
+					value: 20L
+					points: false
+				}
+				{
+					id: "1B75027A972BD583"
+					type: "item"
+					item: "minecraft:diamond"
+					count: 15L
+					consume_items: true
+				}
+			]
+			rewards: [{
+				id: "7A51F630D5365CEF"
+				type: "gamestage"
+				title: "Крафт боевых патронов"
+				icon: "cgm:advanced_bullet"
+				ignore_reward_blocking: true
+				stage: "advanced_bullets"
+			}]
+		}
+		{
+			title: "Граната"
+			icon: "cgm:grenade"
+			x: -9.0d
+			y: 2.0d
+			dependencies: ["2A883018671BEE51"]
+			id: "59A2309393AB87AF"
+			tasks: [
+				{
+					id: "1B030A76CC38918E"
+					type: "xp"
+					value: 15L
+					points: false
+				}
+				{
+					id: "19026759F6F54B89"
+					type: "item"
+					item: "minecraft:diamond"
+					count: 7L
+				}
+			]
+			rewards: [{
+				id: "729F9E08F973C114"
+				type: "gamestage"
+				title: "Крафт гранаты"
+				icon: "cgm:grenade"
+				ignore_reward_blocking: true
+				stage: "grenade"
+			}]
+		}
+		{
+			title: "Гранатомет"
+			icon: {
+				id: "cgm:grenade_launcher"
+				Count: 1b
+				tag: {
+					AmmoCount: 1
+				}
+			}
+			x: -7.0d
+			y: 0.5d
+			dependencies: [
+				"25F03C8A69944C75"
+				"59A2309393AB87AF"
+			]
+			id: "481F3BCA8D32634C"
+			tasks: [
+				{
+					id: "3150F209E26D5155"
+					type: "xp"
+					value: 30L
+					points: false
+				}
+				{
+					id: "5E445BED7D0660C5"
+					type: "item"
+					item: "minecraft:diamond"
+					count: 18L
+				}
+			]
+			rewards: [{
+				id: "200174CF5DB6890D"
+				type: "gamestage"
+				title: "Крафт гранатомета"
+				icon: {
+					id: "cgm:grenade_launcher"
+					Count: 1b
+					tag: {
+						AmmoCount: 1
+					}
+				}
+				ignore_reward_blocking: true
+				stage: "grenade_launcher"
+			}]
+		}
+		{
+			title: "Световая граната"
+			icon: "cgm:stun_grenade"
+			x: -7.0d
+			y: 2.0d
+			dependencies: ["59A2309393AB87AF"]
+			id: "3B32DE75D66F35DC"
+			tasks: [
+				{
+					id: "56F4BC389C3D7130"
+					type: "xp"
+					value: 15L
+					points: false
+				}
+				{
+					id: "65CFC270B05EE246"
+					type: "item"
+					title: "Световая граната"
+					item: "minecraft:diamond"
+					count: 7L
+				}
+			]
+			rewards: [{
+				id: "47DEE8F566DA4B79"
+				type: "gamestage"
+				title: "Крафт световой гранаты"
+				icon: "cgm:stun_grenade"
+				ignore_reward_blocking: true
+				stage: "stun_grenade"
+			}]
+		}
+		{
+			title: "Ракетная установка"
+			icon: {
+				id: "cgm:bazooka"
+				Count: 1b
+				tag: {
+					AmmoCount: 1
+				}
+			}
+			x: -3.0d
+			y: 0.5d
+			dependencies: ["18F9774FAC2FA616"]
+			id: "42671FB0D21A7923"
+			tasks: [
+				{
+					id: "78E943D6190B58C5"
+					type: "xp"
+					value: 75L
+					points: false
+				}
+				{
+					id: "742B5FBFFFD88530"
+					type: "item"
+					item: "minecraft:diamond"
+					count: 48L
+				}
+			]
+			rewards: [{
+				id: "7D61A4C3D134DA02"
+				type: "gamestage"
+				title: "Крафт ракетной установки"
+				icon: {
+					id: "cgm:bazooka"
+					Count: 1b
+					tag: {
+						AmmoCount: 1
+					}
+				}
+				ignore_reward_blocking: true
+				stage: "rocket_launcher"
+			}]
+		}
+		{
+			title: "Ракеты"
+			icon: "cgm:missile"
+			x: -5.0d
+			y: 0.5d
+			dependencies: ["25F03C8A69944C75"]
+			id: "18F9774FAC2FA616"
+			tasks: [
+				{
+					id: "23AAFE5AADD66573"
+					type: "xp"
+					value: 10L
+					points: false
+				}
+				{
+					id: "63CCE5EB81A65B1E"
+					type: "item"
+					item: "minecraft:diamond"
+					count: 5L
+				}
+			]
+			rewards: [{
+				id: "39CF3E7E154574D2"
+				type: "gamestage"
+				title: "Крафт ракет"
+				icon: "cgm:missile"
+				ignore_reward_blocking: true
+				stage: "missile"
+			}]
+		}
+		{
+			title: "Миниган"
+			icon: {
+				id: "cgm:mini_gun"
+				Count: 1b
+				tag: {
+					AmmoCount: 100
+				}
+			}
+			x: -3.0d
+			y: -1.5d
+			dependencies: ["7E267D7C3C9E16FA"]
+			id: "33C109F653DAFE8C"
+			tasks: [
+				{
+					id: "0A68FB28AEA45315"
+					type: "xp"
+					value: 75L
+					points: false
+				}
+				{
+					id: "0C894D187A23C022"
+					type: "item"
+					item: "minecraft:diamond"
+					count: 48L
+				}
+			]
+			rewards: [{
+				id: "7690FA439154F33D"
+				type: "gamestage"
+				title: "Крафт минигана"
+				icon: {
+					id: "cgm:mini_gun"
+					Count: 1b
+					tag: {
+						AmmoCount: 100
+					}
+				}
+				ignore_reward_blocking: true
+				stage: "minigun"
 			}]
 		}
 	]
