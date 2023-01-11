@@ -1,0 +1,70 @@
+{
+	id: "0D4D34D13600E79E"
+	group: "6D9FFF86AF79A207"
+	order_index: 0
+	filename: "0D4D34D13600E79E"
+	title: "Легкое оружие"
+	default_quest_shape: ""
+	default_hide_dependency_lines: false
+	quests: [
+		{
+			title: "Пистолет"
+			x: -11.0d
+			y: -1.5d
+			description: [""]
+			id: "2A883018671BEE51"
+			tasks: [
+				{
+					id: "1447BEFEF27BD41B"
+					type: "xp"
+					value: 5L
+					points: false
+				}
+				{
+					id: "5DC00F950AC76C43"
+					type: "item"
+					item: "minecraft:diamond"
+					consume_items: true
+				}
+			]
+			rewards: [{
+				id: "2EBAC025E24E5726"
+				type: "gamestage"
+				auto: "disabled"
+				ignore_reward_blocking: true
+				stage: "pistol"
+			}]
+		}
+		{
+			title: "Пистолет-пулемет"
+			x: -9.0d
+			y: -1.5d
+			dependencies: ["2A883018671BEE51"]
+			dependency_requirement: "one_completed"
+			id: "05DA23EF88C21723"
+			tasks: [
+				{
+					id: "3C0598C9AF0B87A2"
+					type: "xp"
+					value: 7L
+					points: false
+				}
+				{
+					id: "41112CA920455A4A"
+					type: "item"
+					item: "minecraft:diamond"
+					count: 3L
+					consume_items: true
+				}
+			]
+			rewards: [{
+				id: "510C43EB7308659A"
+				type: "gamestage"
+				auto: "disabled"
+				ignore_reward_blocking: true
+				stage: "uzi"
+			}]
+		}
+	]
+	quest_links: [ ]
+}
