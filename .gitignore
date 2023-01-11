@@ -12,6 +12,5 @@ region
 serverconfig
 stats
 icon.png
-level.dat
 level.dat_old
 session.lock
