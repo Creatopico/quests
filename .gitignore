@@ -1,4 +1,4 @@
-advancments
+advancements
 data
 datapacks
 DIM1
@@ -12,5 +12,6 @@ region
 serverconfig
 stats
 icon.png
+level.dat
 level.dat_old
 session.lock
